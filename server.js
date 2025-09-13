@@ -5,7 +5,7 @@ const express = require('express');
 const app = express();
 
 app.get('/', (req, res) => {
-    res.json ({ message: 'Hello from the server!'});
+    res.json ({ message: 'hello express!'});
 })
 
 // listen for incoming requests ( start teh server)
