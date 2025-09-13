@@ -1,0 +1,24 @@
+{
+  "name": "recipes-app",
+  "version": "1.0.0",
+  "description": "The recipes application is to give idea of how to cock the foods",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chris25005/RecipesApp.git"
+  },
+  "keywords": [
+    "foods",
+    "meals",
+    "recipes"
+  ],
+  "author": "Christu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Chris25005/RecipesApp/issues"
+  },
+  "homepage": "https://github.com/Chris25005/RecipesApp#readme"
+}
