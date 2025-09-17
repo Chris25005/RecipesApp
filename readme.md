@@ -52,66 +52,30 @@ The Recipes App Backend Application is a RESTful API built with Node.js and Expr
 
    - Split code from server.js to app.js
 
-const mealplanSchema = new mongoose.Schema({
-date: {
-type: Date
-},
-dietType: {
-type: String,
-enum: ['Vegetarian', 'Balanced', 'Low-Carb', 'High-Protein']
-},
-meals: [{
-mealType: {
-type: String,
-enum: ['Breakfast', 'Lunch', 'Dinner', 'Snack']
-},
-name: String,
-calories: Number,
-protein: Number,
-carbs: Number,
-fat: Number
-}]
-}, { timestamps: true });
-
-Example Create MealPlan
 
 ```javascript
-{
-   "date": "2025-10-15",
-   "dietType": "Balanced",
-   "meals": [
-         {
-            "mealType": "Breakfast",
-            "name": "Oatmeal with Fruits",
-            "calories": 350,
-            "protein": 10,
-            "carbs": 60,
-            "fat": 5
-         },
-         {
-            "mealType": "Lunch",
-            "name": "Grilled Chicken Salad",
-            "calories": 450,
-            "protein": 40,
-            "carbs": 20,
-            "fat": 15
-         },
-         {
-            "mealType": "Dinner",
-            "name": "Steamed Fish with Vegetables",
-            "calories": 400,
-            "protein": 35,
-            "carbs": 25,
-            "fat": 10
-         },
-         {
-            "mealType": "Snack",
-            "name": "Greek Yogurt with Honey",
-            "calories": 150,
-            "protein": 15,
-            "carbs": 20,
-            "fat": 0
-         }
-   ]
-}
+([
+  {
+    "title": "Pasta",
+    "description": "Delicious Italian pasta",
+    "ingredients": ["Pasta", "Tomato", "Cheese"],
+    "instructions": "Boil pasta, add sauce, serve hot",
+    "cookingTime": 20
+  },
+  {
+    "title": "Chicken Curry",
+    "description": "Spicy Indian chicken curry",
+    "ingredients": ["Chicken", "Onion", "Tomato", "Spices"],
+    "instructions": "Cook chicken with spices and onion-tomato gravy",
+    "cookingTime": 45
+  },
+  {
+    "title": "Vegetable Soup",
+    "description": "Healthy mixed vegetable soup",
+    "ingredients": ["Carrot", "Beans", "Peas", "Corn"],
+    "instructions": "Boil vegetables with water and seasoning",
+    "cookingTime": 30
+  }
+]);
+
 ```
