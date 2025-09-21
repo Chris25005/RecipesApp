@@ -10,11 +10,13 @@ const { isAuthenticated } = require('../middlewares/auth');
 
 const recipesRouter = express.Router();
 
-// CRUD Routes
-recipesRouter.post('/', createRecipes);
-recipesRouter.get('/', isAuthenticated, getallrecipes);
-recipesRouter.get('/:id', getRecipeById);
-recipesRouter.put('/:id', updateRecipeById);
-recipesRouter.delete('/:id', deleteRecipeById); 
+// Public Routes
+recipesRouter.get('/', getallrecipes);     // anyone can view recipes
+recipesRouter.get('/:id', getRecipeById);  // anyone can view a single recipe
+
+// Protected Routes (need token)
+recipesRouter.post('/', isAuthenticated, createRecipes);
+recipesRouter.put('/:id', isAuthenticated, updateRecipeById);
+recipesRouter.delete('/:id', isAuthenticated, deleteRecipeById);
 
 module.exports = recipesRouter;
