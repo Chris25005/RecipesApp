@@ -57,7 +57,6 @@ The Recipes App Backend Application is a RESTful API built with Node.js and Expr
 ```javascript
 
  // "POSTMAN"  Authendication & Authorization
- //  
+ //  "https://documenter.getpostman.com/view/45740328/2sB3HrkxUG"
 
-  
 ```
