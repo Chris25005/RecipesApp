@@ -55,32 +55,9 @@ The Recipes App Backend Application is a RESTful API built with Node.js and Expr
  /// 
 
 ```javascript
- // "POSTMAN"  
- // 'https://documenter.getpostman.com/view/45740328/2sB3HrkxUG'
 
-//Recipe#1
-  {
-    "title": "Pasta",
-    "description": "Delicious Italian pasta",
-    "ingredients": ["Pasta", "Tomato", "Cheese"],
-    "instructions": "Boil pasta, add sauce, serve hot",
-    "cookingTime": 20
-  }
-//Recipe#2
-  {
-    "title": "Chicken Curry",
-    "description": "Spicy Indian chicken curry",
-    "ingredients": ["Chicken", "Onion", "Tomato", "Spices"],
-    "instructions": "Cook chicken with spices and onion-tomato gravy",
-    "cookingTime": 45
-  }
-//Recipe#3
-  {
-    "title": "Vegetable Soup",
-    "description": "Healthy mixed vegetable soup",
-    "ingredients": ["Carrot", "Beans", "Peas", "Corn"],
-    "instructions": "Boil vegetables with water and seasoning",
-    "cookingTime": 30
-  }
+ // "POSTMAN"  Authendication & Authorization
+ //  
+
   
 ```

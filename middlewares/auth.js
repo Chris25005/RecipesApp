@@ -1,28 +1,23 @@
 const jwt = require('jsonwebtoken');
 require('dotenv').config();
 
-const isAuthenticated = async (req, res, next) => {
-
-    // get the token from the request header
-    const token = req.headers.authorization && req.headers.authorization.split(' ')[1];
-     // if no token, return 401
-    if (!token) {
-        return res.status(401).json({ message: 'No token provided' });
+const isAuthenticated = (req, res, next) => {
+    const authHeader = req.headers.authorization;
+    
+    if (!authHeader || !authHeader.startsWith("Bearer ")) {
+        return res.status(401).json({ message: "No token provided" });
     }
+
+    const token = authHeader.split(" ")[1];
 
     try {
-        // verify the token
         const decoded = jwt.verify(token, process.env.JWT_SECRET);
         req.userId = decoded.userId;
-        
-        // proceed to the next middleware or route handler
+        req.userRole = decoded.role;
         next();
-        
     } catch (error) {
-        return res.status(401).json({ message: 'Invalid token' });
+        return res.status(401).json({ message: "Invalid or expired token" });
     }
-}
+};
 
-module.exports = {
-    isAuthenticated
-}
+module.exports = { isAuthenticated };
